@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+
+    <script type="text/javascript" src="main.js"> </script>
+    <style>
+      body{
+        overflow:hidden;
+      }
+      #source{
+        display:none;
+      }
+      canvas{
+        background-color: blue;
+      }
+
+      image{
+        background-color: blue;
+      }
+
+      #info {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color:brown;
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        text-align: center;
+        z-index: 100;
+        display:block;
+        overflow:hidden;
+      }
+      #timer{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        text-align: center;
+        z-index: 110;
+        display:block;
+        overflow:hidden;
+      }
+    </style>
+</head>
+
+<body>
+  <div id="info">
+    <h1>FINGER IS THE NEW LEG</h1>
+    <p>Click anywhere to run</p>
+  </div>
+  <div id="timer" style="color:red"></div>
+  <div id="source">
+    <video id="myVideo" width="512" height="256"></video>
+    <canvas id="myCanvas" width="512" height="256"></canvas>
+    <div id="canvases">
+      <canvas id="frdCanvas1" width="512" height="256"></canvas>
+      <canvas id="frdCanvas2" width="512" height="256"></canvas>
+      <canvas id="frdCanvas3" width="512" height="256"></canvas>
+      <canvas id="frdCanvas4" width="512" height="256"></canvas>
+      <canvas id="frdCanvas5" width="512" height="256"></canvas>
+      <canvas id="frdCanvas6" width="512" height="256"></canvas>
+    </div>
+
+    <div id="images">
+      <image id="frdImage1" width="512" height="256" src="placeholder.jpg"/>
+      <image id="frdImage2" width="512" height="256" src="placeholder.jpg"/>
+      <image id="frdImage3" width="512" height="256" src="placeholder.jpg"/>
+      <image id="frdImage4" width="512" height="256" src="placeholder.jpg"/>
+      <image id="frdImage5" width="512" height="256" src="placeholder.jpg"/>
+      <image id="frdImage6" width="512" height="256" src="placeholder.jpg"/>
+    </div>
+  </div>
+</body>
+</html>
